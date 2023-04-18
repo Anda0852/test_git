@@ -52,7 +52,7 @@ function LcalcRoute() {
             + ".<br />Duration <i class='fas fa-hourglass-start'></i> : " 
             + result.routes[0].legs[0].duration.text 
             + ".</div>";
-
+            
             directionsDisplay.setDirections(result);
         } else {
 

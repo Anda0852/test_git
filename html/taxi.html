@@ -18,6 +18,7 @@
   <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsOWtgXYEONEyBQ9URt49vCOadtZf2fqs&libraries=places"></script>
     <script src="/js/lang.js"></script>
+    <script src="https://kit.fontawesome.com/dcc47001a4.js" crossorigin="anonymous"></script>
   </head>
   <body onload="calcRoute();">
     <section class="navbar">
@@ -58,12 +59,13 @@
           <div class="output11">
             <div style="font-size:16px"  id="output"></div>
             <div style="font-size:16px" id="output2"></div>
+            <div style="width: 100%;"><button class="lang" id="information" style="display: block; height: 50px;  padding: 10px; margin-top: 80px; margin-left: auto; margin-right: auto; font-size: 14px; cursor: pointer; text-align: center; text-decoration: none; outline: none; color: white; background-color: #444; border: none; border-radius: 15px; box-shadow: 0 7px #999;" onclick="goInformation();">ข้อมูลเพิ่มเติม</button>
+            </div>
           </div>
-          <div>
-            <span class="close">&times;</span>
-            <button class="lang" id="information" style="display: block; height: 50px; margin-top: 510px; width: 200px; padding: 10px; font-size: 14px; cursor: pointer; text-align: center; text-decoration: none; outline: none; color: white; background-color: #444; border: none; border-radius: 15px; box-shadow: 0 7px #999;" onclick="goInformation();">ข้อมูลเพิ่มเติม</button>
-          </div>
-          </div>
+        </div>
+        <span class="close">&times;</span>
+      </div>
+    </div>
         </div>
     </section>
       </div>
