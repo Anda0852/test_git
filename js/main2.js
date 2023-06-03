@@ -44,8 +44,8 @@ function LcalcRoute() {
     directionsService.route(request, function (result, status) {
         if (status == google.maps.DirectionsStatus.OK) {
             const output = document.querySelector('#output');
-            output.innerHTML = "<div class='alert-info'>From: " 
-            + "Phuket International Airport (HKT), Mai Khao, Thalang District, Phuket, Thailand" + ".<br />To: " 
+            output.innerHTML = "<i class='fa-solid fa-location-dot' style='color: #179bee;'></i> ต้นทาง: " 
+            + "Phuket International Airport (HKT), Mai Khao, Thalang District, Phuket, Thailand" + ".<br /><i class='fa-solid fa-location-dot' style='color: #f80d0d;'></i> ปลายทาง: " 
             + buttonValue 
             output2.innerHTML = ".<br /> Driving distance <i class='fas fa-road'></i> : "
             + result.routes[0].legs[0].distance.text 
@@ -71,82 +71,82 @@ function LcalcRoute() {
                 const output2 = document.querySelector('#output2');
                 var distance = parseFloat(result2.routes[0].legs[0].distance.text.split(" ")[0])
                 var Kilometer = distance / 0.62137
-                console.log("distance = " + distance + " or " + Kilometer.toFixed(2) + " Kilometer")
+                console.log("ระยะทาง = " + distance + " or " + Kilometer.toFixed(2) + " กิโลเมตร")
     
     
                 //output2.innerHTML = result2.routes[0].legs[0].distance.text
                 if (buttonValue === "Patong Beach, ตำบลป่าตอง อำเภอกะทู้ ภูเก็ต ประเทศไทย") {
                    limu += 699
                     console.log("Trave price By limu = " + limu.toFixed(2) + " baht")
-                    output2.innerHTML = "distance = " + distance + " mile"+ " or " + Kilometer.toFixed(2) + " Kilometer" + ".<br />Travel price By limusine = " + limu.toFixed(2) + " baht"
+                    output2.innerHTML = "<i class='fa-solid fa-road' style='color: #e78413;'></i> ระยะทาง = " + distance + " ไมล์"+ " or " + Kilometer.toFixed(2) + " กิโลเมตร" + ".<br /><i class='fa-regular fa-money-check-dollar' style='color: #16f343;'></i>  ราคาค่าโดยสาร = " + limu.toFixed(2) + " baht"
                 } else if (buttonValue === "Mai Khao Beach, ภูเก็ต ประเทศไทย") {
                     limu += 699
                     console.log("Trave price By limu = " + limu.toFixed(2) + " baht")
-                    output2.innerHTML = "distance = " + distance + " mile"+ " or " + Kilometer.toFixed(2) + " Kilometer" + ".<br />Travel price By limusine = " + limu.toFixed(2) + " baht"
+                    output2.innerHTML = "<i class='fa-solid fa-road' style='color: #e78413;'></i> ระยะทาง = " + distance + " ไมล์"+ " or " + Kilometer.toFixed(2) + " กิโลเมตร" + ".<br /><i class='fa-regular fa-money-check-dollar' style='color: #16f343;'></i>  ราคาค่าโดยสาร = " + limu.toFixed(2) + " baht"
                 } else if (buttonValue === "Kalim Beach, ตำบล กะทู้ อำเภอกะทู้ ภูเก็ต ประเทศไทย") {
                     limu += 699
                     console.log("Trave price By limu = " + limu.toFixed(2) + " baht")
-                    output2.innerHTML = "distance = " + distance + " mile"+ " or " + Kilometer.toFixed(2) + " Kilometer" + ".<br />Travel price By limusine = " + limu.toFixed(2) + " baht"
+                    output2.innerHTML = "<i class='fa-solid fa-road' style='color: #e78413;'></i> ระยะทาง = " + distance + " ไมล์"+ " or " + Kilometer.toFixed(2) + " กิโลเมตร" + ".<br /><i class='fa-regular fa-money-check-dollar' style='color: #16f343;'></i>  ราคาค่าโดยสาร = " + limu.toFixed(2) + " baht"
                 }else if (buttonValue === "Nai Thon Beach, ภูเก็ต ประเทศไทย") {
                     limu += 699
                     console.log("Trave price By limu = " + limu.toFixed(2) + " baht")
-                    output2.innerHTML = "distance = " + distance + " mile"+ " or " + Kilometer.toFixed(2) + " Kilometer" + ".<br />Travel price By limusine = " + limu.toFixed(2) + " baht"
+                    output2.innerHTML = "<i class='fa-solid fa-road' style='color: #e78413;'></i> ระยะทาง = " + distance + " ไมล์"+ " or " + Kilometer.toFixed(2) + " กิโลเมตร" + ".<br /><i class='fa-regular fa-money-check-dollar' style='color: #16f343;'></i>  ราคาค่าโดยสาร = " + limu.toFixed(2) + " baht"
                 }else if (buttonValue === "Bangtao Beach, อำเภอถลาง ภูเก็ต ประเทศไทย") {
                     limu += 699
                     console.log("Trave price By limu = " + limu.toFixed(2) + " baht")
-                    output2.innerHTML = "distance = " + distance + " mile"+ " or " + Kilometer.toFixed(2) + " Kilometer" + ".<br />Travel price By limusine = " + limu.toFixed(2) + " baht"
+                    output2.innerHTML = "<i class='fa-solid fa-road' style='color: #e78413;'></i> ระยะทาง = " + distance + " ไมล์"+ " or " + Kilometer.toFixed(2) + " กิโลเมตร" + ".<br /><i class='fa-regular fa-money-check-dollar' style='color: #16f343;'></i>  ราคาค่าโดยสาร = " + limu.toFixed(2) + " baht"
                 }else if (buttonValue === "Ao Por Viewpoint ตำบล ป่าคลอก อำเภอถลาง ภูเก็ต ประเทศไทย") {
                     limu += 699
                     console.log("Trave price By limu = " + limu.toFixed(2) + " baht")
-                    output2.innerHTML = "distance = " + distance + " mile"+ " or " + Kilometer.toFixed(2) + " Kilometer" + ".<br />Travel price By limusine = " + limu.toFixed(2) + " baht"
+                    output2.innerHTML = "<i class='fa-solid fa-road' style='color: #e78413;'></i> ระยะทาง = " + distance + " ไมล์"+ " or " + Kilometer.toFixed(2) + " กิโลเมตร" + ".<br /><i class='fa-regular fa-money-check-dollar' style='color: #16f343;'></i>  ราคาค่าโดยสาร = " + limu.toFixed(2) + " baht"
                 }else if (buttonValue === "Tri Trang Beach, ตำบลป่าตอง อำเภอกะทู้ ภูเก็ต ประเทศไทย") {
                     limu += 799
                     console.log("Trave price By limu = " + limu.toFixed(2) + " baht")
-                    output2.innerHTML = "distance = " + distance + " mile"+ " or " + Kilometer.toFixed(2) + " Kilometer" + ".<br />Travel price By limusine = " + limu.toFixed(2) + " baht"
+                    output2.innerHTML = "<i class='fa-solid fa-road' style='color: #e78413;'></i> ระยะทาง = " + distance + " ไมล์"+ " or " + Kilometer.toFixed(2) + " กิโลเมตร" + ".<br /><i class='fa-regular fa-money-check-dollar' style='color: #16f343;'></i>  ราคาค่าโดยสาร = " + limu.toFixed(2) + " baht"
                 }else if (buttonValue === "Surin Beach, ตำบลเชิงทะเล ภูเก็ต ประเทศไทย") {
                     limu += 799
                     console.log("Trave price By limu = " + limu.toFixed(2) + " baht")
-                    output2.innerHTML = "distance = " + distance + " mile"+ " or " + Kilometer.toFixed(2) + " Kilometer" + ".<br />Travel price By limusine = " + limu.toFixed(2) + " baht"
+                    output2.innerHTML = "<i class='fa-solid fa-road' style='color: #e78413;'></i> ระยะทาง = " + distance + " ไมล์"+ " or " + Kilometer.toFixed(2) + " กิโลเมตร" + ".<br /><i class='fa-regular fa-money-check-dollar' style='color: #16f343;'></i>  ราคาค่าโดยสาร = " + limu.toFixed(2) + " baht"
                 }else if (buttonValue === "Kata Beach, ตำบล กะรน ภูเก็ต ประเทศไทย") {
                     limu += 799
                     console.log("Trave price By limu = " + limu.toFixed(2) + " baht")
-                    output2.innerHTML = "distance = " + distance + " mile"+ " or " + Kilometer.toFixed(2) + " Kilometer" + ".<br />Travel price By limusine = " + limu.toFixed(2) + " baht"
+                    output2.innerHTML = "<i class='fa-solid fa-road' style='color: #e78413;'></i> ระยะทาง = " + distance + " ไมล์"+ " or " + Kilometer.toFixed(2) + " กิโลเมตร" + ".<br /><i class='fa-regular fa-money-check-dollar' style='color: #16f343;'></i>  ราคาค่าโดยสาร = " + limu.toFixed(2) + " baht"
                 }else if (buttonValue === "Kamala Beach, ตำบล กมลา ภูเก็ต ประเทศไทย") {
                     limu += 799
                     console.log("Trave price By limu = " + limu.toFixed(2) + " baht")
-                    output2.innerHTML = "distance = " + distance + " mile"+ " or " + Kilometer.toFixed(2) + " Kilometer" + ".<br />Travel price By limusine = " + limu.toFixed(2) + " baht"
+                    output2.innerHTML = "<i class='fa-solid fa-road' style='color: #e78413;'></i> ระยะทาง = " + distance + " ไมล์"+ " or " + Kilometer.toFixed(2) + " กิโลเมตร" + ".<br /><i class='fa-regular fa-money-check-dollar' style='color: #16f343;'></i>  ราคาค่าโดยสาร = " + limu.toFixed(2) + " baht"
                 }else if (buttonValue === "Karon Beach, ตำบล กะรน ภูเก็ต ประเทศไทย") {
                     limu += 799
                     console.log("Trave price By limu = " + limu.toFixed(2) + " baht")
-                    output2.innerHTML = "distance = " + distance + " mile"+ " or " + Kilometer.toFixed(2) + " Kilometer" + ".<br />Travel price By limusine = " + limu.toFixed(2) + " baht"
+                    output2.innerHTML = "<i class='fa-solid fa-road' style='color: #e78413;'></i> ระยะทาง = " + distance + " ไมล์"+ " or " + Kilometer.toFixed(2) + " กิโลเมตร" + ".<br /><i class='fa-regular fa-money-check-dollar' style='color: #16f343;'></i>  ราคาค่าโดยสาร = " + limu.toFixed(2) + " baht"
                 }else if (buttonValue === "Cape Panwa, ตำบล วิชิต อำเภอเมืองภูเก็ต ภูเก็ต ประเทศไทย") {
                     limu += 899
                     console.log("Trave price By limu = " + limu.toFixed(2) + " baht")
-                    output2.innerHTML = "distance = " + distance + " mile"+ " or " + Kilometer.toFixed(2) + " Kilometer" + ".<br />Travel price By limusine = " + limu.toFixed(2) + " baht"
+                    output2.innerHTML = "<i class='fa-solid fa-road' style='color: #e78413;'></i> ระยะทาง = " + distance + " ไมล์"+ " or " + Kilometer.toFixed(2) + " กิโลเมตร" + ".<br /><i class='fa-regular fa-money-check-dollar' style='color: #16f343;'></i>  ราคาค่าโดยสาร = " + limu.toFixed(2) + " baht"
                 }else if (buttonValue === "Rawai Beach, ตำบล ราไวย์ อ เมืองภูเก็ต, ภูเก็ต ประเทศไทย") {
                     limu += 899
                     console.log("Trave price By limu = " + limu.toFixed(2) + " baht")
-                    output2.innerHTML = "distance = " + distance + " mile"+ " or " + Kilometer.toFixed(2) + " Kilometer" + ".<br />Travel price By limusine = " + limu.toFixed(2) + " baht"
+                    output2.innerHTML = "<i class='fa-solid fa-road' style='color: #e78413;'></i> ระยะทาง = " + distance + " ไมล์"+ " or " + Kilometer.toFixed(2) + " กิโลเมตร" + ".<br /><i class='fa-regular fa-money-check-dollar' style='color: #16f343;'></i>  ราคาค่าโดยสาร = " + limu.toFixed(2) + " baht"
                 }else if (buttonValue === "Kata Noi Beach, ตำบล กะรน อำเภอเมืองภูเก็ต ภูเก็ต ประเทศไทย") {
                     limu += 899
                     console.log("Trave price By limu = " + limu.toFixed(2) + " baht")
-                    output2.innerHTML = "distance = " + distance + " mile"+ " or " + Kilometer.toFixed(2) + " Kilometer" + ".<br />Travel price By limusine = " + limu.toFixed(2) + " baht"
+                    output2.innerHTML = "<i class='fa-solid fa-road' style='color: #e78413;'></i> ระยะทาง = " + distance + " ไมล์"+ " or " + Kilometer.toFixed(2) + " กิโลเมตร" + ".<br /><i class='fa-regular fa-money-check-dollar' style='color: #16f343;'></i>  ราคาค่าโดยสาร = " + limu.toFixed(2) + " baht"
                 }else if (buttonValue === "Chalong Bay Rum Distillery, Soi 2, ตำบล ฉลอง Amphur Muang, ภูเก็ต ประเทศไทย") {
                     limu += 899
                     console.log("Trave price By limu = " + limu.toFixed(2) + " baht")
-                    output2.innerHTML = "distance = " + distance + " mile"+ " or " + Kilometer.toFixed(2) + " Kilometer" + ".<br />Travel price By limusine = " + limu.toFixed(2) + " baht"
+                    output2.innerHTML = "<i class='fa-solid fa-road' style='color: #e78413;'></i> ระยะทาง = " + distance + " ไมล์"+ " or " + Kilometer.toFixed(2) + " กิโลเมตร" + ".<br /><i class='fa-regular fa-money-check-dollar' style='color: #16f343;'></i>  ราคาค่าโดยสาร = " + limu.toFixed(2) + " baht"
                 }else if (buttonValue === "Nai Harn Beach, ตำบล ราไวย์ อำเภอเมืองภูเก็ต ภูเก็ต ประเทศไทย") {
                     limu += 899
                     console.log("Trave price By limu = " + limu.toFixed(2) + " baht")
-                    output2.innerHTML = "distance = " + distance + " mile"+ " or " + Kilometer.toFixed(2) + " Kilometer" + ".<br />Travel price By limusine = " + limu.toFixed(2) + " baht"
+                    output2.innerHTML = "<i class='fa-solid fa-road' style='color: #e78413;'></i> ระยะทาง = " + distance + " ไมล์"+ " or " + Kilometer.toFixed(2) + " กิโลเมตร" + ".<br /><i class='fa-regular fa-money-check-dollar' style='color: #16f343;'></i>  ราคาค่าโดยสาร = " + limu.toFixed(2) + " baht"
                 }else if (buttonValue === "Laem Ka Beach, ตำบล ราไวย์ อำเภอเมืองภูเก็ต ภูเก็ต ประเทศไทย") {
                     limu += 899
                     console.log("Trave price By limu = " + limu.toFixed(2) + " baht")
-                    output2.innerHTML = "distance = " + distance + " mile"+ " or " + Kilometer.toFixed(2) + " Kilometer" + ".<br />Travel price By limusine = " + limu.toFixed(2) + " baht"
+                    output2.innerHTML = "<i class='fa-solid fa-road' style='color: #e78413;'></i> ระยะทาง = " + distance + " ไมล์"+ " or " + Kilometer.toFixed(2) + " กิโลเมตร" + ".<br /><i class='fa-regular fa-money-check-dollar' style='color: #16f343;'></i>  ราคาค่าโดยสาร = " + limu.toFixed(2) + " baht"
                 }else if (buttonValue === "Friendship Beach, ตำบล ราไวย์ อำเภอเมืองภูเก็ต ภูเก็ต ประเทศไทย") {
                     limu += 899
                     console.log("Trave price By limu = " + limu.toFixed(2) + " baht")
-                    output2.innerHTML = "distance = " + distance + " mile"+ " or " + Kilometer.toFixed(2) + " Kilometer" + ".<br />Travel price By limusine = " + limu.toFixed(2) + " baht"
+                    output2.innerHTML = "<i class='fa-solid fa-road' style='color: #e78413;'></i> ระยะทาง = " + distance + " ไมล์"+ " or " + Kilometer.toFixed(2) + " กิโลเมตร" + ".<br /><i class='fa-regular fa-money-check-dollar' style='color: #16f343;'></i>  ราคาค่าโดยสาร = " + limu.toFixed(2) + " baht"
                 }
     
 
@@ -183,12 +183,6 @@ function map2() {
     //pass the request to the route method
     directionsService.route(request, function (result, status) {
         if (status == google.maps.DirectionsStatus.OK) {
-
-            //Get distance and time
-            // const output = document.querySelector('#output');
-            // output.innerHTML = "<div class='alert-info'>From: " + request.origin + ".<br />To: " + request.destination + ".<br /> Driving distance <i class='fas fa-road'></i> : "
-            //     + result.routes[0].legs[0].distance.text + ".<br />Duration <i class='fas fa-hourglass-start'></i> : " + result.routes[0].legs[0].duration.text + ".</div>";
-
             //display route
             directionsDisplay.setDirections(result);
         } else {

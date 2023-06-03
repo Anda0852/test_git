@@ -93,9 +93,15 @@
     <div class="main-info" id="place">
       <form>
         <h1  class="lang" id="enter" style="font-size: 15px;">กรุณาใส่สถานที่ต้นทางและจุดหมายปลายทาง</h1>
+      
         <div class="form-group">
-          <input type="search" id="from" placeholder="จุดเริ่มต้นของคุณคือที่ไหน" class="form-control" name="Origin"
+          <input type="search" id="from" placeholder="จุดเริ่มต้นของคุณคือที่ไหน" class="form-control" name="Origin" list="myList"
             style="border-radius: 10px; width: 500ox; height: 50px; padding: 20px;">
+            <datalist id="myList">
+              <option value="Phuket International Airport (HKT), ตำบล ไม้ขาว อำเภอถลาง ภูเก็ต ประเทศไทย">
+              <option value="2">
+              <option value="3">
+            </datalist>
         </div>
         <div class="form-group">
           <input type="search" id="to" placeholder="คุณอยากจะไปที่ไหน" class="form-control" name="Destination"
@@ -160,54 +166,6 @@
   </script>
   <script id="bound">
 
-    // var searchInput1 = 'from';
-    // $(document).ready(function () {
-    //  var autocomplete1;
-    //  var bounds1 = new google.maps.LatLngBounds(
-    //   new google.maps.LatLng(7.6875, 98.3167), // พิกัดตำแหน่งบนซ้ายของจังหวัดภูเก็ต
-    //   new google.maps.LatLng(8.1953, 98.7633) // พิกัดตำแหน่งล่างขวาของจังหวัดภูเก็ต
-    //   );
-    //  autocomplete1 = new google.maps.places.Autocomplete((document.getElementById(searchInput1)), {
-    //   types: ['geocode'],
-    //   componentRestrictions: {
-    //   country: "TH"
-    //  },
-    //  bounds: bounds1
-
-    //  });
-
-    //  google.maps.event.addListener(autocomplete1, 'place_changed', function () {
-    //   var near_place = autocomplete.getPlace();
-    //  });
-    // });
-
-    // var searchInput2 = 'to';
-    // $(document).ready(function () {
-    //  var autocomplete2;
-    //  var bounds2 = new google.maps.LatLngBounds(
-    //   new google.maps.LatLng(7.6875, 98.3167), // พิกัดตำแหน่งบนซ้ายของจังหวัดภูเก็ต
-    //   new google.maps.LatLng(8.1953, 98.7633) // พิกัดตำแหน่งล่างขวาของจังหวัดภูเก็ต/ northeast corner of Phuket
-    //   );
-    //  autocomplete2 = new google.maps.places.Autocomplete((document.getElementById(searchInput2)), {
-    //   types: ['geocode'],
-    //   componentRestrictions: {
-    //   country: "TH"
-    //   },
-    //   bounds: bounds2
-    //  });
-
-    //  google.maps.event.addListener(autocomplete2, 'place_changed', function () {
-    //   var near_place1 = autocomplete1.getPlace();
-    //  });
-    // });
-
-    // var no = new google.maps.LatLng(8.539, 98.534); //Set value north.
-    // var so = new google.maps.LatLng(7.413, 98.246); //Set value south.
-    // var ea = new google.maps.LatLng(8.093, 99.197); //Set value east.
-    // var we = new google.maps.LatLng(7.826, 97.497); //Set value west.
-    // var bounds = new google.maps.LatLngBounds(so, no ,ea ,we); //Create variable to stored lat and lang for 4 direction.
-
-
     var bounds = new google.maps.LatLngBounds(
       new google.maps.LatLng(7.6875, 98.3167), // พิกัดตำแหน่งบนซ้ายของจังหวัดภูเก็ต
       new google.maps.LatLng(8.1953, 98.7633) // พิกัดตำแหน่งล่างขวาของจังหวัดภูเก็ต
@@ -232,7 +190,7 @@
       </script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="/js/index.js"></script>
+  <script src="/js/index1.js"></script>
   <script src="/js/lang.js"></script>
 </body>
 </html>

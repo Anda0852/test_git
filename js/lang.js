@@ -68,8 +68,8 @@ function changeLanguage(lang) {
                 th: 'หน่วย'
             },
             detail : {
-                en: 'DETAIL',
-                th: 'รายละเอียดเส้นทาง'
+                en: 'MAP AND DETAIL',
+                th: 'แผนที่และรายละเอียด'
             },
             btn : {
                 en: 'MAP',
@@ -98,6 +98,14 @@ function changeLanguage(lang) {
             link : {
                 en: 'LINK WEBSITE',
                 th: 'ลิงก์เว็บไซต์'
+            },
+            review : {
+                en: 'REVIEW SCORE',
+                th: 'คะแนนรีวิว'
+            },
+            review2 : {
+                en: 'REVIEW',
+                th: 'ให้คะแนน'
             }
             
             

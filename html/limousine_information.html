@@ -12,14 +12,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://kit.fontawesome.com/ab2155e76b.js" crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/ab2155e76b.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/ab2155e76b.js" crossorigin="anonymous"></script>  
   <link rel="stylesheet" href="css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
   <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsOWtgXYEONEyBQ9URt49vCOadtZf2fqs&libraries=places"></script>
     <script src="/js/lang.js"></script>
     <style>
-
         .table {
           display: flex;
           position: relative;
@@ -68,8 +67,65 @@
           ;
           color: white;
         }
+
+        .checked {
+          color: orange;
+        }
+        form {
+          max-width: 500px;
+          margin: 0 auto;
+          padding: 20px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          background-color: #f7f7f7;
+        }
+
+        form div {
+          margin-bottom: 10px;
+        }
+
+        form label {
+          display: inline-block;
+          margin-bottom: 5px;
+          font-weight: bold;
+        }
+
+        form input[type="checkbox"],
+        form input[type="radio"] {
+          margin-right: 5px;
+        }
+
+        form input[type="text"],select,
+        form input[type="email"] {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          background-color: #fff;
+          font-size: 16px;
+        }
+
+        form input[type="radio"] + label {
+          margin-right: 10px;
+        }
+
+        form input[type="submit"] {
+          display: block;
+          width: 100%;
+          padding: 10px;
+          margin-top: 20px;
+          border: none;
+          border-radius: 5px;
+          background-color: #4CAF50;
+          color: #fff;
+          font-size: 16px;
+          cursor: pointer;
+        }
+
+        form input[type="submit"]:hover {
+          background-color: #3e8e41;
+        }
       </style>
-    
   </head>
   <body onload="calcRoute();">
     <section class="navbar">
@@ -92,58 +148,168 @@
               <th class="lang" id="name">ชื่อ</th>
               <th class="lang" id="tel">เบอร์โทร</th>
               <th class="lang" id="link">ลิงก์เว็บไซต์</th>
+              <th class="lang" id="review"></th>
+              <th class="lang" id="review2"></th>
             </tr>
             <tr>
               <td>Phuket Luxury Transfers</td>
               <td>062-2426-477</td>
               <td><a href="https://plt.limo/th/">Learn-more</a></td>
-             
-        </div>
-        </td>
+              <td>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+              </td>
+              <td><button class="lang" id="btn6">press</button></td>
         </tr>
         <tr>
           <td>Vecay Phuket</td>
           <td>0815551117</td>
           <td><a href="https://m5.gs/T3ZDWW">Learn-more</a></td>
+          <td>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </td>
+          <td><button class="lang" id="btn7">press</button></td>
          
         </tr>
         <tr>
           <td>Phuket trip</td>
           <td>087-672-7266</td>
           <td><a href="https://www.phuket-trips.com/th/airport-transfer.html">Learn-more</a></td>
+          <td>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </td>
+          <td><button class="lang" id="btn8">press</button></td>
         </tr>
         <tr>
           <td>interconyiental Phuket resort </td>
           <td>076 629 999</td>
           <td><a href="https://phuket.intercontinental.com/th/offer/limousine-services">Learn-more</a></td>
-
+          <td>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </td>
+          <td><button class="lang" id="btn9">press</button></td>
         </tr>
         <tr>
           <td>friendly taxi and Tour Phuket </td>
           <td>0872679016</td>
           <td><a href="https://m5.gs/QVRGRX">Learn-more</a></td>
+          <td>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </td>
+          <td><button class="lang" id="btn10">press</button></td>
 
         </tr>
         <tr>
           <td>limousine & ลีมูซีนภูเก็ต</td>
           <td>0923954414</td>
           <td><a href="https://twitter.com/ple11061971">Learn-more</a></td>
-   
+          <td>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </td>
+          <td><button class="lang" id="btn11">press</button></td>
         </tr>
         <tr>
           <td>True leasing</td>
           <td>1279</td>
           <td><a href="https://m5.gs/U1RWcW">Learn-more</a></td>
+          <td>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </td>
+          <td><button class="lang" id="btn12">press</button></td>
 
         </tr>
         <tr>
           <td>klook </td>
           <td>-</td>
           <td><a href="https://m5.gs/dkhlTj">Learn-more</a></td>
+          <td>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </td>
+          <td><button class="lang" id="btn13">press</button></td>
         </tr>
        
         </table>
+        <div id="myModal3" class="modal2">
+          <div class="modal-content2">
+            <form>
+              <div>
+                <label>ประเภทการใช้บริการ:</label><br>
+                <input type="radio" id="taxi" name="service" value="taxi">
+                <label for="taxi">Taxi</label><br>
+                <input type="radio" id="limousine" name="service" value="limousine">
+                <label for="limousine">Limousine</label>
+              </div>
+              <div>
+                <label>จุดหมายปลายทาง:</label><br>
+                <label for="from">From:</label>
+                <input type="text" id="from" name="from"><br>
+                <label for="to">To:</label>
+                <!-- <input type="text" id="to" name="to"> -->
+                <select name="to" id="to">
+                    <option value="patong beach">Patong Beach</option>
+                    <option value="mai khao beach">Mai khao Beach</option>
+                    <option value="kalim beach">Kalim Beach</option>
+                    <option value="naithonburi beach">Naithonburi Beach</option>
+                    <option value="bangtao beach">Bangtao Beach</option>
+                    <option value="ao por">Ao Por</option>
+                    <option value="tri trang beach">Tri Trang Beach</option>
+                    <option value="surin beach">Surin Beach</option>
+                    <option value="kata beach">Kata Beach</option>
+                    <option value="kamala beach">Kamala Beach</option>
+                    <option value="karon beach">Karon Beach</option>
+                    <option value="cape panwa">Cape Panwa</option>
+                    <option value="rawai beach">Rawai Beach</option>
+                    <option value="kata noi beach">Kata noi Beach</option>
+                    <option value="chalong bay">Chalong Bay</option>
+                    <option value="nai harn beach">Nai harn Beach</option>
+                    <option value="laem ka beach">Laem ka Beach</option>
+                    <option value="friendship beach">Friendship Beach</option>
 
+                </select>
+              </div>
+              <div>
+                <label>บริษัทที่ใช้งาน:</label><br>
+                <input type="text" id="company" name="company">
+              </div>
+              <div>
+                <label>คะแนน:</label><br>
+                <input type="radio" id="five" name="score" value="5">
+                <label for="five">5 คะแนน</label><br>
+                <input type="radio" id="four" name="score" value="4">
+                <label for="four">4 คะแนน</label><br>
+                <input type="radio" id="three" name="score" value="3">
+                <label for="three">3 คะแนน</label><br>
+                <input type="radio" id="two" name="score" value="2">
+                <label for="two">2 คะแนน</label><br>
+                <input type="radio" id="one" name="score" value="1">
+                <label for="one">1 คะแนน</label>
+              </div>
+              <div>
+                <label>หมายเหตุอื่นๆ:</label><br>
+                <input type="text" id="note" name="note">
+              </div>
+              <input type="submit" value="Submit">
+            </form>
+          
+           
+          </div>
+          <span class="close3">&times;</span>
     </section>
     <footer>
       <p>&copy; 2023</p>
@@ -151,6 +317,34 @@
    <script>
     const initialLang = localStorage.getItem('lang') || 'en';
 changeLanguage(initialLang);
+    </script>
+     <script>
+      var modal = document.getElementById("myModal3");
+
+      // Get the button that opens the modal
+      var btn = document.querySelectorAll("#btn6, #btn7, #btn8, #btn9, #btn10, #btn11, #btn12, #btn13");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close3")[0];
+
+      // When the user clicks on the button, open the modal
+      btn.forEach(function(btn) {
+      btn.addEventListener("click", function() {
+      modal.style.display = "block";
+        });
+      });
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
     </script>
      
     <script src="/js/lang.js"></script>

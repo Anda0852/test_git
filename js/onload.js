@@ -1,31 +1,3 @@
-// var myLatLng = { lat: 7.951933, lng: 98.338088 };
-// var mapOptions = {
-//     center: myLatLng,
-//     zoom: 7,
-//     mapTypeId: google.maps.MapTypeId.ROADMAP
-// };
-
-// var map = new google.maps.Map(document.getElementById('googleMap'), mapOptions);
-// var bounds = new google.maps.LatLngBounds();
-
-// bounds.extend({ lat: 8.539, lng: 98.534 }); // North
-// bounds.extend({ lat: 7.413, lng: 98.246 }); // South
-// bounds.extend({ lat: 8.093, lng: 99.197 }); // East
-// bounds.extend({ lat: 7.826, lng: 97.497 }); // West
-
-// map.fitBounds(bounds);
-
-// google.maps.event.addListener(map, 'bounds_changed', function () {
-//     if (map.getBounds().intersects(bounds)) return;
-//     map.panToBounds(bounds);
-// });
-
-// var directionsService = new google.maps.DirectionsService();
-
-// var directionsDisplay = new google.maps.DirectionsRenderer();
-
-// directionsDisplay.setMap(map);
-
 function calcRoute() {
     // Get origin and destination from local storage
     const origin = localStorage.getItem("origin");
@@ -74,8 +46,12 @@ function calcRoute() {
             }
 
             // Display taxi fare
-            output.innerHTML = "<i class='fa-solid fa-location-dot' style='color: #179bee;'></i> ต้นทาง  : "+request.origin + ".<br/> <i class='fa-solid fa-location-dot' style='color: #f80d0d;'></i> ปลายทาง : " + request.destination
-            output2.innerHTML = "<i class='fa-solid fa-hourglass-start' style='color: #f5e105;'></i> ระยะเวลา  : " + result.routes[0].legs[0].duration.text + "<br/></div><i class='fa-solid fa-road' style='color: #e78413;'></i>" + `ระยะทาง = ${Kilometer.toFixed(2)} กิโลเมตร <br/><i class='fa-regular fa-money-check-dollar' style='color: #16f343;'></i> ราคา : = ${taxi.toFixed(2)} บาท`;
+            output.innerHTML = "<i class='fa-solid fa-location-dot' style='color: #179bee;'></i> ต้นทาง  : "
+            +request.origin + ".<br/> <i class='fa-solid fa-location-dot' style='color: #f80d0d;'></i> ปลายทาง : " + request.destination
+            output2.innerHTML = "<i class='fa-solid fa-hourglass-start' style='color: #f5e105;'></i> ระยะเวลา  : " 
+            + result.routes[0].legs[0].duration.text + "<br/></div><i class='fa-solid fa-road' style='color: #e78413;'></i>" 
+            + `ระยะทาง = ${Kilometer.toFixed(2)} กิโลเมตร <br/><i class='fa-regular fa-money-check-dollar' 
+                style='color: #16f343;'></i> ราคา : = ${taxi.toFixed(2)} บาท`;
             // Display route on map
             directionsDisplay.setDirections(result);
         } else {
@@ -86,38 +62,5 @@ function calcRoute() {
         }
     });
 }
-
-
-
-// function map() {
-//     //create request
-//     var request = {
-//         origin: localStorage.getItem("origin"),
-//         destination: localStorage.getItem("destination"),
-//         travelMode: google.maps.TravelMode.DRIVING, //WALKING, BYCYCLING, TRANSIT
-//         unitSystem: google.maps.UnitSystem.IMPERIAL
-//     }
-
-
-//     //pass the request to the route method
-//     directionsService.route(request, function (result, status) {
-//         if (status == google.maps.DirectionsStatus.OK) {
-
-//             //Get distance and time
-//             // const output = document.querySelector('#output');
-//             // output.innerHTML = "<div class='alert-info'>From: " + request.origin + ".<br />To: " + request.destination + ".<br /> Driving distance <i class='fas fa-road'></i> : "
-//             //     + result.routes[0].legs[0].distance.text + ".<br />Duration <i class='fas fa-hourglass-start'></i> : " + result.routes[0].legs[0].duration.text + ".</div>";
-//             //display route
-//             directionsDisplay.setDirections(result);
-//         } else {
-//             //delete route from map
-//             directionsDisplay.setDirections({ routes: [] });
-//             //center map in mylat
-//             map.setCenter(myLatLng);
-//             //show error message
-//             output.innerHTML = "<div class='alert-danger'><i class='fas fa-exclamation-triangle'></i> Could not retrieve driving distance.</div>";
-//         }
-//     });
-// }
 
 

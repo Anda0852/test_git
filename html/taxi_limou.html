@@ -19,36 +19,6 @@
   <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsOWtgXYEONEyBQ9URt49vCOadtZf2fqs&libraries=places"></script>
     <script src="/js/lang.js"></script>
-    <!-- <script>
-      function switchLanguage(lang) {
-          var elements = document.getElementsByClassName('lang');
-          for (var i = 0; i < elements.length; i++) {
-            elements[i].innerHTML = translations[lang][elements[i].id];
-          }
-        }
-        var translations = {
-          'en': {
-            'home': 'HOME',
-            'about': 'ABOUT',
-            'contact': 'CONTACT',
-            'foreign': 'FOREIGN',
-            'taxi' : 'TAXI',
-            'limousine' : 'LIMOUSINE',
-            'btn2' : 'CALCULATE',
-            'btn3' : 'SHOW ROUTE',
-            'destination' : 'DESTINATION',
-            'price' : 'PRICE',
-            'unit' : 'UNIT',
-            'detail' : 'DETAIL',
-            'btn' : 'MAP'
-          },
-          'th': {
-            'home': 'หน้าแรก',
-            'about': 'เกี่ยวกับ',
-            'contact': 'ติดต่อ'
-          }
-        }
-    </script> -->
   <style>
     .table {
       display: flex;
@@ -62,13 +32,13 @@
 
     #btn{
       padding: 10px;
-      font-size: 13px;
+      font-size: 17px;
       cursor: pointer;
       text-align: center;
       text-decoration: none;
       outline: none;
-      color: white;
-      background-color: #444;
+      color: black;
+      background-color: #87CEFA;
       border: none;
       border-radius: 15px;
       box-shadow: 0 7px #999;
@@ -108,10 +78,12 @@
       padding-top: 12px;
       padding-bottom: 12px;
       text-align: left;
-      background-color: #444;
-      ;
-      color: white;
+      background-color: #87CEFA;
+      color: black;
     }
+    .checked {
+          color: orange;
+        } 
   </style>
 
   </head>
@@ -170,9 +142,9 @@
           <div id="googleMap"></div>
           <div class="outputall">
           <div class="output11">
-            <div style="font-size:16px"  id="output"></div>
-            <div style="font-size:16px" id="output2"></div>
-            <div style="width: 100%;"><button class="lang" id="information" style="display: block; height: 50px;  padding: 10px; margin-top: 80px; margin-left: auto; margin-right: auto; font-size: 14px; cursor: pointer; text-align: center; text-decoration: none; outline: none; color: white; background-color: #444; border: none; border-radius: 15px; box-shadow: 0 7px #999;" onclick="goInformation();">ข้อมูลเพิ่มเติม</button>
+            <div style="font-size:18px"  id="output"></div>
+            <div style="font-size:18px" id="output2"></div>
+            <div style="width: 100%;"><button class="lang" id="information" style="display: block; height: 50px;  padding: 10px; margin-top: 80px; margin-left: auto; margin-right: auto; font-size: 17px; cursor: pointer; text-align: center; text-decoration: none; outline: none; color: black; background-color: #87CEFA; border: none; border-radius: 15px; box-shadow: 0 7px #999;" onclick="goInformation();"></button>
             </div>
           </div>
         </div>
@@ -194,7 +166,7 @@
               <td>699</td>
               <td>Baht</td>
               <td style="text-align: center;">
-                <button class="lang" id="btn" type="button" value="Patong Beach, ตำบลป่าตอง อำเภอกะทู้ ภูเก็ต ประเทศไทย" onclick="goToNextPage(this.value)"><i class='fas fa-car-alt'></i>แสดงแผนที่</button>
+                <button  id="btn" type="button" value="Patong Beach, ตำบลป่าตอง อำเภอกะทู้ ภูเก็ต ประเทศไทย" onclick="goToNextPage(this.value)"><i class="fa-solid fa-map-location-dot" style="color: #ff1900;"></i></i></button>
               </td>
         </div>
         </td>
@@ -204,47 +176,53 @@
           <td>699</td>
           <td>Baht</td>
           <td style="text-align: center;">
-            <button class="lang" id="btn" type="button" value="Mai Khao Beach, ภูเก็ต ประเทศไทย" onclick="goToNextPage(this.value)"><i class='fas fa-car-alt'></i>แสดงแผนที่</button>
+            <button  id="btn" type="button" value="Mai Khao Beach, ภูเก็ต ประเทศไทย" onclick="goToNextPage(this.value)"></i><i class="fa-solid fa-map-location-dot" style="color: #ff1900;"></i></button>
           </td>
+
         </tr>
         <tr>
           <td>kalim beach</td>
           <td>699</td>
           <td>Baht</td>
           <td style="text-align: center;">
-           <button  class="lang" id="btn" type="button" value="Kalim Beach, ตำบล กะทู้ อำเภอกะทู้ ภูเก็ต ประเทศไทย" onclick="goToNextPage(this.value)"><i class='fas fa-car-alt'></i>แสดงแผนที่</button>
+           <button   id="btn" type="button" value="Kalim Beach, ตำบล กะทู้ อำเภอกะทู้ ภูเก็ต ประเทศไทย" onclick="goToNextPage(this.value)"><i class="fa-solid fa-map-location-dot" style="color: #ff1900;"></i></button>
           </td>
+
         </tr>
         <tr>
           <td>Naithonburi beach</td>
           <td>699</td>
           <td>Baht</td>
           <td style="text-align: center;">
-                <button class="lang" id="btn" type="button" value="Nai Thon Beach, ภูเก็ต ประเทศไทย" onclick="goToNextPage(this.value)"><i class='fas fa-car-alt'></i>แสดงแผนที่</button>
+                <button  id="btn" type="button" value="Nai Thon Beach, ภูเก็ต ประเทศไทย" onclick="goToNextPage(this.value)"><i class="fa-solid fa-map-location-dot" style="color: #ff1900;"></i></button>
           </td>
+
         </tr>
         <tr>
           <td>Bangtao beach</td>
           <td>699</td>
           <td>Baht</td>
           <td style="text-align: center;">
-                <button class="lang" id="btn" type="button" value="Bangtao Beach, อำเภอถลาง ภูเก็ต ประเทศไทย" onclick="goToNextPage(this.value)"><i class='fas fa-car-alt'></i>แสดงแผนที่</button>
+                <button    id="btn" type="button" value="Bangtao Beach, อำเภอถลาง ภูเก็ต ประเทศไทย" onclick="goToNextPage(this.value)"><i class="fa-solid fa-map-location-dot" style="color: #ff1900;"></i></button>
           </td>
+
         </tr>
         <tr>
           <td>Ao Por Viewpoint Pa Klok, Thalang District, Phuket </td>
           <td>699</td>
           <td>Baht</td>
           <td style="text-align: center;">
-            <button class="lang" id="btn" type="button" value="Ao Por Viewpoint ตำบล ป่าคลอก อำเภอถลาง ภูเก็ต ประเทศไทย" onclick="goToNextPage(this.value)"><i class='fas fa-car-alt'></i>แสดงแผนที่</button>
+            <button id="btn" type="button" value="Ao Por Viewpoint ตำบล ป่าคลอก อำเภอถลาง ภูเก็ต ประเทศไทย" onclick="goToNextPage(this.value)"><i class="fa-solid fa-map-location-dot" style="color: #ff1900;"></i></button>
           </td>
+
+
         </tr>
         <tr>
           <td>Tri Trang Beach</td>
           <td>799</td>
           <td>Baht</td>
           <td style="text-align: center;">
-                <button class="lang" id="btn" type="button" value="Tri Trang Beach, ตำบลป่าตอง อำเภอกะทู้ ภูเก็ต ประเทศไทย" onclick="goToNextPage(this.value)"><i class='fas fa-car-alt'></i>แสดงแผนที่</button>
+                <button  id="btn" type="button" value="Tri Trang Beach, ตำบลป่าตอง อำเภอกะทู้ ภูเก็ต ประเทศไทย" onclick="goToNextPage(this.value)"><i class="fa-solid fa-map-location-dot" style="color: #ff1900;"></i></button>
           </td>
         </tr>
         <tr>
@@ -252,7 +230,7 @@
           <td>799</td>
           <td>Baht</td>
           <td style="text-align: center;">
-                <button class="lang" id="btn" type="button" value="Surin Beach, ตำบลเชิงทะเล ภูเก็ต ประเทศไทย" onclick="goToNextPage(this.value)"><i class='fas fa-car-alt'></i>แสดงแผนที่</button>
+                <button  id="btn" type="button" value="Surin Beach, ตำบลเชิงทะเล ภูเก็ต ประเทศไทย" onclick="goToNextPage(this.value)"><i class="fa-solid fa-map-location-dot" style="color: #ff1900;"></i></button>
           </td>
         </tr>
         <tr>
@@ -260,7 +238,7 @@
           <td>799</td>
           <td>Baht</td>
           <td style="text-align: center;">
-            <button class="lang" id="btn" type="button" value="Kata Beach, ตำบล กะรน ภูเก็ต ประเทศไทย" onclick="goToNextPage(this.value)"><i class='fas fa-car-alt'></i>แสดงแผนที่</button>
+            <button  id="btn" type="button" value="Kata Beach, ตำบล กะรน ภูเก็ต ประเทศไทย" onclick="goToNextPage(this.value)"><i class="fa-solid fa-map-location-dot" style="color: #ff1900;"></i></button>
           </td>
         </tr>
         <tr>
@@ -268,7 +246,7 @@
           <td>799</td>
           <td>Baht</td>
           <td style="text-align: center;">
-                <button class="lang" id="btn" type="button" value="Kamala Beach, ตำบล กมลา ภูเก็ต ประเทศไทย" onclick="goToNextPage(this.value)"><i class='fas fa-car-alt'></i>แสดงแผนที่</button>
+                <button  id="btn" type="button" value="Kamala Beach, ตำบล กมลา ภูเก็ต ประเทศไทย" onclick="goToNextPage(this.value)"><i class="fa-solid fa-map-location-dot" style="color: #ff1900;"></i></button>
           </td>
         </tr>
         <tr>
@@ -276,64 +254,72 @@
           <td>799</td>
           <td>Baht</td>
           <td style="text-align: center;">
-                <button class="lang" id="btn" type="button" value="Karon Beach, ตำบล กะรน ภูเก็ต ประเทศไทย" onclick="goToNextPage(this.value)"><i class='fas fa-car-alt'></i>แสดงแผนที่</button>
+                <button  id="btn" type="button" value="Karon Beach, ตำบล กะรน ภูเก็ต ประเทศไทย" onclick="goToNextPage(this.value)"><i class="fa-solid fa-map-location-dot" style="color: #ff1900;"></i></button>
           </td>
+
         </tr>
         <tr>
           <td>Cape Panwa </td>
           <td>899</td>
           <td>Baht</td>
           <td style="text-align: center;">
-            <button class="lang" id="btn" type="button" value="Cape Panwa, ตำบล วิชิต อำเภอเมืองภูเก็ต ภูเก็ต ประเทศไทย" onclick="goToNextPage(this.value)"><i class='fas fa-car-alt'></i>แสดงแผนที่</button>
+            <button  id="btn" type="button" value="Cape Panwa, ตำบล วิชิต อำเภอเมืองภูเก็ต ภูเก็ต ประเทศไทย" onclick="goToNextPage(this.value)"><i class="fa-solid fa-map-location-dot" style="color: #ff1900;"></i></button>
           </td>
+
         </tr>
         <tr>
           <td>Rawai Beach </td>
           <td>899</td>
           <td>Baht</td>
           <td style="text-align: center;">
-                <button class="lang" id="btn" type="button" value="Rawai Beach, ตำบล ราไวย์ อ เมืองภูเก็ต, ภูเก็ต ประเทศไทย" onclick="goToNextPage(this.value)"><i class='fas fa-car-alt'></i>แสดงแผนที่</button>
+                <button id="btn" type="button" value="Rawai Beach, ตำบล ราไวย์ อ เมืองภูเก็ต, ภูเก็ต ประเทศไทย" onclick="goToNextPage(this.value)"><i class="fa-solid fa-map-location-dot" style="color: #ff1900;"></i></button>
           </td>
+
         </tr>
         <tr>
           <td>Kata noi beach</td>
           <td>899</td>
           <td>Baht</td>
           <td style="text-align: center;">
-                <button class="lang" id="btn" type="button" value="Kata Noi Beach, ตำบล กะรน อำเภอเมืองภูเก็ต ภูเก็ต ประเทศไทย" onclick="goToNextPage(this.value)"><i class='fas fa-car-alt'></i>แสดงแผนที่</button>
+                <button id="btn" type="button" value="Kata Noi Beach, ตำบล กะรน อำเภอเมืองภูเก็ต ภูเก็ต ประเทศไทย" onclick="goToNextPage(this.value)"><i class="fa-solid fa-map-location-dot" style="color: #ff1900;"></i></button>
           </td>
+
         </tr>
         <tr>
           <td>Chalong Bay</td>
           <td>899</td>
           <td>Baht</td>
           <td style="text-align: center;">
-                <button class="lang" id="btn" type="button" value="Chalong Bay Rum Distillery, Soi 2, ตำบล ฉลอง Amphur Muang, ภูเก็ต ประเทศไทย" onclick="goToNextPage(this.value)"><i class='fas fa-car-alt'></i>แสดงแผนที่</button>
+                <button id="btn" type="button" value="Chalong Bay Rum Distillery, Soi 2, ตำบล ฉลอง Amphur Muang, ภูเก็ต ประเทศไทย" onclick="goToNextPage(this.value)"><i class="fa-solid fa-map-location-dot" style="color: #ff1900;"></i></button>
           </td>
+
         </tr>
         <tr>
           <td>Nai Harn Beach</td>
           <td>899</td>
           <td>Baht</td>
           <td style="text-align: center;">
-                <button class="lang" id="btn" type="button" value="Nai Harn Beach, ตำบล ราไวย์ อำเภอเมืองภูเก็ต ภูเก็ต ประเทศไทย" onclick="goToNextPage(this.value)"><i class='fas fa-car-alt'></i>แสดงแผนที่</button>
+                <button  id="btn" type="button" value="Nai Harn Beach, ตำบล ราไวย์ อำเภอเมืองภูเก็ต ภูเก็ต ประเทศไทย" onclick="goToNextPage(this.value)"><i class="fa-solid fa-map-location-dot" style="color: #ff1900;"></i></button>
           </td>
+
         </tr>
         <tr>
           <td>laem ka beach</td>
           <td>899</td>
           <td>Baht</td>
           <td style="text-align: center;">
-                <button class="lang" id="btn" type="button" value="Laem Ka Beach, ตำบล ราไวย์ อำเภอเมืองภูเก็ต ภูเก็ต ประเทศไทย" onclick="goToNextPage(this.value)"><i class='fas fa-car-alt'></i>แสดงแผนที่</button>
+                <button  id="btn" type="button" value="Laem Ka Beach, ตำบล ราไวย์ อำเภอเมืองภูเก็ต ภูเก็ต ประเทศไทย" onclick="goToNextPage(this.value)"><i class="fa-solid fa-map-location-dot" style="color: #ff1900;"></i></button>
           </td>
+
         </tr>
         <tr>
           <td>Friendship Beach</td>
           <td>899</td>
           <td>Baht</td>
           <td style="text-align: center;">
-                <button class="lang" id="btn" type="button" value="Friendship Beach, ตำบล ราไวย์ อำเภอเมืองภูเก็ต ภูเก็ต ประเทศไทย" onclick="goToNextPage(this.value)"><i class='fas fa-car-alt'></i>แสดงแผนที่</button>
+                <button id="btn" type="button" value="Friendship Beach, ตำบล ราไวย์ อำเภอเมืองภูเก็ต ภูเก็ต ประเทศไทย" onclick="goToNextPage(this.value)"><i class="fa-solid fa-map-location-dot" style="color: #ff1900;"></i></button>
           </td>
+
         </tr>
         </table>
       </div>
@@ -452,7 +438,7 @@ changeLanguage(initialLang);
       </script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="/js/index.js"></script>
+    <script src="/js/index1.js"></script>
     <script src="/js/onload.js"></script>
     <script src="/js/lang.js"></script>
   </body>

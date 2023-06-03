@@ -99,13 +99,13 @@
         border: 2px solid black;  
     }
     #output{
-        margin-top:70px;
+        margin-top: 35px;
         font-weight: bold;
-        width: 90%;
-        height:30%;
-        border-top: 2px solid black;
-        border-bottom: 2px solid black;
-        padding-top: 25px;
+        width: 95%;
+        height:35%;
+        /* border-top: 2px solid black;
+        border-bottom: 2px solid black; */
+        padding-top: 2px;
         padding-left: 23px;
         justify-content:center;
         align-items:center;
@@ -113,18 +113,17 @@
         margin-right : auto;
         background-color: #F0FFFF;
 
-
       }
     #output2 {
         margin-top:50px;    
         font-weight: bold;
-        width: 90%;
+        width: 95%;
         height:25%;
-        padding-top: 25px;
-        padding-left: 22px;
-        border-top: 2px solid black;
-        border-bottom : 2px solid black;
+        /* border-top: 2px solid black;
+        border-bottom : 2px solid black; */
         justify-content:center;
+        padding-top: 20px;
+        padding-left: 23px;
         align-items:center;
         margin-left : auto;
         margin-right : auto;

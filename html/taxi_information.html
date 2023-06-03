@@ -64,40 +64,73 @@
           padding-top: 12px;
           padding-bottom: 12px;
           text-align: left;
-          background-color: #444;
-          ;
-          color: white;
+          background-color: #87CEFA;
+          color: black;
         }
+        .checked {
+          color: orange;
+        }
+        form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+}
+
+form div {
+  margin-bottom: 10px;
+}
+
+form label {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input[type="checkbox"],
+form input[type="radio"] {
+  margin-right: 5px;
+}
+
+form input[type="text"],
+form input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 16px;
+}
+
+form input[type="radio"] + label {
+  margin-right: 10px;
+}
+
+form input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
       </style>
     
-    <script>
-  
-      // function switchlanguage(lang) {
-      //     var elements = document.getElementsByClassName('lang');
-      //     for (var i = 0; i < elements.length; i++) {
-      //       elements[i].innerHTML = translations[lang][elements[i].id];
-      //     }
-      //   }
-      //   var translations = {
-      //     'en': {
-      //       'home': 'HOME',
-      //       'about': 'ABOUT',
-      //       'contact': 'CONTACT',
-      //       'taxi' : 'TAXI METER',
-      //       'btn4' : 'CALCULATE'
-      //     },
-      //     'th': {
-      //       'home': 'หน้าแรก',
-      //       'about': 'เกี่ยวกับ',
-      //       'contact': 'ติดต่อ'
-      //     }
-      //   }
-    </script>
   </head>
   <body onload="calcRoute();">
     <section class="navbar">
       <div class="logo">
-    
       </div>
       <ul>
         <li><a href="index.html" id="home" class="lang">หน้าแรก</a></li>
@@ -115,11 +148,21 @@
               <th class="lang" id="name">ชื่อ</th>
               <th class="lang" id="place">สถานที่ให้บริการ</th>
               <th class="lang" id="tel">เบอร์โทร</th>
+              <th class="lang" id="review"></th>
+              <th class="lang" id="review2"></th>
             </tr>
             <tr>
               <td>Phuket Taxi Meter</td>
               <td>สนามบินภูเก็ต</td>
               <td>088-1110-171</td>
+              <td>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+              </td>
+                      <td><button class="lang" id="btn6">press</button></td>
         </div>
         </td>
         </tr>
@@ -127,105 +170,246 @@
           <td>Taxi Meter Services 24hr.</td>
           <td>ภูเก็ต และพื้นที่ใกล้ๆ</td>
           <td>095-257-7277</td>
+          <td>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </td>
+                  <td><button class="lang" id="btn7">press</button></td>
         </tr>
         <tr>
           <td>Phuket Taxi Meter Service</td>
           <td>สนามบินภูเก็ต</td>
           <td>082-595-6491</td>
-  
+          <td>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </td>
+                  <td><button class="lang" id="btn8">press</button></td>
         </tr>
         <tr>
           <td>Get Phuket Taxi</td>
           <td>ภูเก็ต และพื้นที่ใกล้ๆ</td>
           <td>099-113-3171</td>
-        
+          <td>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </td>
+                  <td><button class="lang" id="btn9">press</button></td>
         </tr>
         <tr>
           <td>TAXI METER ALL THAILAND SERVICE.</td>
           <td>สนามบินภูเก็ต และทั่วทุกจังหวัด</td>
           <td>081-8893-277</td>
-       
+          <td>
+            <span class="fa fa-star checked"></span>
+          </td>
+                  <td><button class="lang" id="btn10">press</button></td>
         </tr>
         <tr>
           <td>Alex Taxi Phuket & Tour Co., Ltd</td>
           <td>เทศบาลนครภูเก็ต</td>
           <td>099-369-4422</td>
-         
+          <td>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </td>
+                  <td><button class="lang" id="btn11">press</button></td>
         </tr>
         <tr>
           <td>Phuket Transfer Travel Andaman (หจก.ภูเก็ต ทรานสเฟอร์ อันดามัน)</td>
           <td>เทศบาลนครภูเก็ต</td>
           <td>061-292-1330</td>
-          
+          <td>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </td>
+                  <td><button class="lang" id="btn12">press</button></td>
         </tr>
         <tr>
           <td>Phuket Private driver by Srisawat tour and travel</td>
           <td>ตำบล วิชิต ตำบล รัษฎา และพื้นที่ใกล้ๆ</td>
           <td>088-448-4592</td>
-          
+          <td>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </td>
+                  <td><button class="lang" id="btn13">press</button></td>
         </tr>
         <tr>
           <td>Friendly taxi & tour Phuket</td>
           <td>ตำบลป่าตอง</td>
           <td>087-267-9016</td>
-         
+          <td>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </td>
+                  <td><button class="lang" id="btn14">press</button></td>
         </tr>
         <tr>
           <td>นิ๊กกี้ ภูเก็ต แท็กซี่</td>
           <td>ท่าอากาศยานภูเก็ต</td>
           <td>099-252-5422</td>
-         
+          <td>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </td>
+                  <td><button class="lang" id="btn15">press</button></td>
         </tr>
         <tr>
           <td>Anny Taxi Phuket</td>
           <td>ตำบล กะทู้ ตำบลป่าตอง</td>
           <td>093-580-4939</td>
-         
+          <td>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </td>
+                  <td><button class="lang" id="btn16">press</button></td>
         </tr>
         <tr>
           <td>PHUKET TAXI PRIVATE</td>
           <td>ตำบล กมลา และพื้นที่ใกล้ๆ</td>
           <td>087-624-6130</td>
+          <td>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </td>
+                  <td><button class="lang" id="btn17">press</button></td>
         </tr>
         <tr>
           <td>Phuket Taxi Service</td>
           <td>จังหวัดภูเก็ต</td>
           <td>087-557-8081</td>
-         
+          <td>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </td>
+                  <td><button class="lang" id="btn18">press</button></td>
         </tr>
         <tr>
           <td>PHUKET BEST TAXI DRIVER</td>
           <td>ตำบลเชิงทะเล</td>
           <td>095-965-4143</td>
-          
+          <td>
+            <span class="fa fa-star checked"></span>
+          </td>
+                  <td><button class="lang" id="btn19">press</button></td>
         </tr>
         <tr>
           <td>Phuket Airport Transfer to Phatong</td>
           <td>สนามบินภุเก็ต , ป่าตอง</td>
           <td>089-078-6220</td>
-          
+          <td>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </td>
+                  <td><button class="lang" id="btn20">press</button></td>
         </tr>
         <tr>
           <td>Taxi friendly chalong</td>
           <td>ตำบล ฉลอง</td>
           <td>082-418-8891</td>
-          
+          <td>
+            <span class="fa fa-star checked"></span>
+          </td>
+                  <td><button class="lang" id="btn21">press</button></td>
         </tr>
         <tr>
           <td>ACE's Phuket Transfers & Tours</td>
           <td>เทศบาลนครภูเก็ต กระบี่ และพื้นที่ใกล้ๆ</td>
           <td>086-597-4549</td>
-          
+          <td>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </td>
+                  <td><button class="lang" id="btn22">press</button></td>
         </tr>
         </table>
 
+        <div id="myModal3" class="modal2">
+          <div class="modal-content2">
+            <form>
+              <div>
+                <label>ประเภทการใช้บริการ:</label><br>
+                <input type="radio" id="taxi" name="service" value="taxi">
+                <label for="taxi">Taxi</label><br>
+                <input type="radio" id="limousine" name="service" value="limousine">
+                <label for="limousine">Limousine</label>
+              </div>
+              <div>
+                <label>จุดหมายปลายทาง:</label><br>
+                <label for="from">From:</label>
+                <input type="text" id="from" name="from"><br>
+                <label for="to">To:</label>
+                <input type="text" id="to" name="to">
+              </div>
+              <div>
+                <label>บริษัทที่ใช้งาน:</label><br>
+                <input type="text" id="company" name="company">
+              </div>
+              <div>
+                <label>คะแนน:</label><br>
+                <input type="radio" id="five" name="score" value="5">
+                <label for="five">5 คะแนน</label><br>
+                <input type="radio" id="four" name="score" value="4">
+                <label for="four">4 คะแนน</label><br>
+                <input type="radio" id="three" name="score" value="3">
+                <label for="three">3 คะแนน</label><br>
+                <input type="radio" id="two" name="score" value="2">
+                <label for="two">2 คะแนน</label><br>
+                <input type="radio" id="one" name="score" value="1">
+                <label for="one">1 คะแนน</label>
+              </div>
+              <div>
+                <label>หมายเหตุอื่นๆ:</label><br>
+                <input type="text" id="note" name="note">
+              </div>
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+          <span class="close3">&times;</span>
     </section>
     <footer>
       <p>&copy; 2023</p>
     </footer>
    <script>
     const initialLang = localStorage.getItem('lang') || 'en';
-changeLanguage(initialLang);
+          changeLanguage(initialLang);
+    </script>
+     <script>
+      var modal = document.getElementById("myModal3");
+
+      // Get the button that opens the modal
+ 
+      var btn = document.querySelectorAll("#btn6, #btn7, #btn8, #btn9, #btn10, #btn11, #btn12, #btn13, #btn14, #btn15, #btn16, #btn17, #btn18, #btn19, #btn20, #btn21, #btn22");
+      // var btn = document.getElementById("btn6");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close3")[0];
+
+      // When the user clicks on the button, open the modal
+      btn.forEach(function(btn) {
+      btn.addEventListener("click", function() {
+      modal.style.display = "block";
+        });
+      });
+    
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
     </script>
 
     <script src="/js/lang.js"></script>
